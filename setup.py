@@ -1,12 +1,15 @@
-import os, io
+import os
+import io
+import sys
 from setuptools import find_packages, setup, Command
+from shutil import rmtree
 
 NAME = "django-crawfish"
 DESCRIPTION = "pending..."
 URL = "https://gitlab.com/crawfordleeds/crawfish"
 EMAIL = "crawford@crawfordleeds.com"
 AUTHOR = "Crawford Leeds"
-REQUIRES_PYTHON = ">=3.6.0"
+REQUIRES_PYTHON = ">=3.6"
 
 # Dont' manually change the version here. Use bumpversion instead
 VERSION = "0.0.0"
@@ -25,6 +28,38 @@ try:
         long_description = f"\n{f.read()}"
 except FileNotFoundError:
     long_description = DESCRIPTION
+
+
+class UploadCDommand(Command):
+    """Support setup.py upload"""
+
+    description = "Buildand publish the package."
+    user_options = []
+
+    @staticmethod
+    def status(s):
+        """Print in bold"""
+        print("\033[1m{0}\033[0m".format(s))
+
+    def initialize_options(self):
+        pass
+
+    def finalize_options(self):
+        pass
+
+    def run(self):
+        try:
+            self.status("Removing previous builds...")
+            rmtree(os.path.join(here, "dist"))
+        except OSError:
+            pass
+
+        self.status("Build source and wheel (universal) distribution...")
+        os.system("{0} setup.py sdist bdist_wheel --universal".format(sys.executable))
+
+        self.status("Upload the package to PyPI via Twine...")
+        os.system("twine upload dist/*")
+
 
 setup(
     name=NAME,
