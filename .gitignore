@@ -170,6 +170,3 @@ fabric.properties
 # Redis
 *.rdb
 
-# Frontend Built Files
-vue_frontend/webpack-stats.json
-healthpat/static/vue/*
