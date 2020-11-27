@@ -18,7 +18,12 @@ VERSION = "0.0.0"
 REQUIRED = ["Django>=2.2"]
 
 # Optional packages
-EXTRAS = {"dev": ["black==20.8b1"]}
+EXTRAS = {
+    "dev": [
+        "black==20.8b1",
+        "bumpversion==0.6.0",  # This will also install bump2version
+    ]
+}
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -30,10 +35,10 @@ except FileNotFoundError:
     long_description = DESCRIPTION
 
 
-class UploadCDommand(Command):
+class UploadCommand(Command):
     """Support setup.py upload"""
 
-    description = "Buildand publish the package."
+    description = "Build and publish the package."
     user_options = []
 
     @staticmethod
@@ -83,4 +88,5 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.8",
     ],
+    cmdclass={"updload": UploadCommand},
 )
