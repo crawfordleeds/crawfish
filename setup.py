@@ -15,7 +15,7 @@ REQUIRES_PYTHON = ">=3.6"
 VERSION = "0.0.0"
 
 # Required packages for this module
-REQUIRED = []
+REQUIRED = ["Django>=2.2"]
 
 # Optional packages
 EXTRAS = {"dev": ["black==20.8b1"]}
@@ -71,7 +71,7 @@ setup(
     author=AUTHOR,
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
-    install_required=REQUIRED,
+    install_requires=REQUIRED,
     extras_require=EXTRAS,
     include_package_data=True,
     license="MIT",
