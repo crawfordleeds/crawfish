@@ -1,5 +1,13 @@
 # crawfish
 
+## Documentation
+
+### Install
+
+```bash
+pip install django-crawfish
+```
+
 ## Development
 
 Install package dependencies:
