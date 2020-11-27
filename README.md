@@ -1,4 +1,8 @@
 # Crawfish
+![PyPI - License](https://img.shields.io/pypi/l/django-crawfish)
+![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/crawfordleeds/crawfish)
+![PyPI - Django Version](https://img.shields.io/pypi/djversions/django-crawfish)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-crawfish)
 
 ## Documentation
 
