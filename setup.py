@@ -82,7 +82,7 @@ setup(
     license="MIT",
     classifiers=[
         "Development Status :: 1 - Planning",
-        "Intended Audience : Developers",
+        "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Natural Language :: English",
         "Programming Language :: Python :: 3",

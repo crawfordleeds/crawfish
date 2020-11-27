@@ -170,3 +170,5 @@ fabric.properties
 # Redis
 *.rdb
 
+# Build
+dist/
