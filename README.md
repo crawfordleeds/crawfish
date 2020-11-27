@@ -1,4 +1,4 @@
-# crawfish
+# Crawfish
 
 ## Documentation
 
@@ -21,5 +21,3 @@ Install dev dependencies:
 ```bash
 pip install -e .[dev]
 ```
-
-

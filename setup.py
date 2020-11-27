@@ -80,6 +80,7 @@ setup(
     extras_require=EXTRAS,
     include_package_data=True,
     license="MIT",
+    url=URL,
     classifiers=[
         "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",
