@@ -88,5 +88,5 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.8",
     ],
-    cmdclass={"updload": UploadCommand},
+    cmdclass={"upload": UploadCommand},
 )
