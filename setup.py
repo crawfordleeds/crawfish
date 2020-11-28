@@ -22,6 +22,7 @@ EXTRAS = {
     "dev": [
         "black==20.8b1",
         "bumpversion==0.6.0",  # This will also install bump2version
+        "twine==3.2.0",
     ]
 }
 
