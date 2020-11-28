@@ -5,6 +5,9 @@
 ![PyPI - Django Version](https://img.shields.io/pypi/djversions/django-crawfish)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-crawfish)
 
+This project contains a collection of code I re-use for most of my Django projects and is not [yet] well suited
+for public consumption.
+
 ## Documentation
 
 ### Install
