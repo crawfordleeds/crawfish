@@ -63,7 +63,9 @@ class UploadCommand(Command):
         os.system("{0} setup.py sdist bdist_wheel --universal".format(sys.executable))
 
         self.status("Upload the package to PyPI via Twine...")
-        os.system("twine upload dist/*")
+        os.system(
+            f"twine upload dist/*"
+        )  # twine username/password set in .pypirc file or TWINE_USERNAME / TWINE_PASSWORD env variables
 
 
 setup(
