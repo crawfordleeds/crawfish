@@ -1,5 +1,5 @@
 stages:
-  - test
+#  - test
   - publish
 
 cache:
@@ -9,8 +9,9 @@ before_script:
   - python --version
   - pip --cache-dir=.pip install -e . && pip install -e '.[dev]'
 
-test:
-  stage: test
+#test:
+#  stage: test
+
 
 publish:
   stage: publish
