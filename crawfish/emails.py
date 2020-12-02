@@ -26,7 +26,12 @@ def send_mail(
     d = {}
     messages = []
     for t in to_email:
-        if settings.APP_ENVIRONMENT not in ("production", "prod"):
+        if getattr(
+            settings, "APP_ENVIRONMENT", None
+        ) and settings.APP_ENVIRONMENT not in (
+            "production",
+            "prod",
+        ):
             """override data and to_email"""
             logger.info(
                 f"Not in production. Replacing to email {t} with {settings.SERVER_EMAIL}"

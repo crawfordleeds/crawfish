@@ -10,7 +10,7 @@ class EmailsTests(TestCase):
     def test_message__with_from_email(self):
         """Test sending an email with a from_email"""
         to_email = "crawford@crawfordleeds.com"
-        from_email = "nemer@crawfordleeds.com"
+        from_email = "na@crawfordleeds.com"
         template_id = "d-73e65fa7b1cd4593a52eaab4d1f9a609"
         data = {"crawford@crawfordleeds.com": {"first_name": "Test First Name"}}
         resp = send_mail(
@@ -42,6 +42,24 @@ class EmailsTests(TestCase):
         self.assertEqual(mail.outbox[0].template_id, template_id)
         self.assertEqual(mail.outbox[0].merge_data, expected_data)
         self.assertEqual(mail.outbox[0].to, [settings.SERVER_EMAIL])
+
+    @override_settings()
+    def test_message__no_app_environment(self):
+        """
+        Test sending a message where the environment does not have the APP_ENVIRONMENT setting configured.py
+        This should act as if in production
+        """
+        del settings.APP_ENVIRONMENT
+        to_email = "crawford@crawfordleeds.com"
+        template_id = "d-73e65fa7b1cd4593a52eaab4d1f9a609"
+        data = {"crawford@crawfordleeds.com": {"first_name": "Test First Name"}}
+        resp = send_mail(to_email=to_email, template_id=template_id, data=data)
+
+        self.assertTrue(resp)
+        self.assertEqual(len(mail.outbox), 1)
+        self.assertEqual(mail.outbox[0].template_id, template_id)
+        self.assertEqual(mail.outbox[0].merge_data, data)
+        self.assertEqual(mail.outbox[0].to, [to_email])
 
     @override_settings(SERVER_EMAIL="help@crawfordleeds.com")
     def test_message_not_in_production__to_list(self):
