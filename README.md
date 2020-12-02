@@ -1,6 +1,4 @@
-<div style="text-align:center">
-    <img src="https://res.cloudinary.com/dmuligbfy/image/upload/c_scale,r_20,w_200/Crawfish/crawfish.png"/>
-</div>
+![](https://res.cloudinary.com/dmuligbfy/image/upload/c_scale,r_20,w_200/Crawfish/crawfish.png)
 
 # Crawfish
 ![PyPI - License](https://img.shields.io/pypi/l/django-crawfish)
