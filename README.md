@@ -1,3 +1,5 @@
+![](https://res.cloudinary.com/dmuligbfy/image/upload/v1606952266/Crawfish/crawfish.png)
+
 # Crawfish
 ![PyPI - License](https://img.shields.io/pypi/l/django-crawfish)
 ![PyPI](https://img.shields.io/pypi/v/django-crawfish)
@@ -10,7 +12,7 @@ for public consumption.
 
 ## Documentation
 
-### Install
+### Installation
 
 ```bash
 pip install django-crawfish
@@ -28,4 +30,11 @@ Install dev dependencies:
 
 ```bash
 pip install -e '.[dev]'
+```
+
+Run tests:
+
+```bash
+python runtests.py
+
 ```
