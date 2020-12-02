@@ -1,6 +1,6 @@
 ![](https://res.cloudinary.com/dmuligbfy/image/upload/c_scale,r_20,w_150/Crawfish/crawfish.png)
 
-# Crawfish
+# Django Crawfish
 ![PyPI - License](https://img.shields.io/pypi/l/django-crawfish)
 ![PyPI](https://img.shields.io/pypi/v/django-crawfish)
 ![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/crawfordleeds/crawfish)
