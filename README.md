@@ -12,6 +12,8 @@ for public consumption.
 
 ## Documentation
 
+[https://django-crawfish.readthedocs.io/en/latest](https://django-crawfish.readthedocs.io/en/latest)
+
 ### Installation
 
 ```bash
