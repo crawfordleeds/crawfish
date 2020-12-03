@@ -11,24 +11,27 @@ before_script:
   - python --version
   - pip --cache-dir=.pip install -e . && pip install -e '.[dev]'
 
+.base_tests:
+  after_script:
+      - bash <(curl -s https://codecov.io/bash)
+
 python36:
+  extends: .base_tests
   image: python:3.6-slim
   stage: test
   script: tox -e py36
-  after_script:
-    - bash <(curl -s https://codecov.io/bash)
-
 
 python37:
+  extends: .base_tests
   image: python:3.7-slim
   stage: test
   script: tox -e py37
 
 python38:
+  extends: .base_tests
   image: python:3.8-slim
   stage: test
   script: tox -e py38
-
 
 publish:
   stage: publish
