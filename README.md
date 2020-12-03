@@ -12,7 +12,7 @@ for public consumption.
 
 ## Documentation
 
-[https://crawfish.readthedocs.io/en/latest](https://crawfish.readthedocs.io//en/latest)
+[https://crawfish.readthedocs.io/en/latest](https://crawfish.readthedocs.io/en/latest)
 
 ### Installation
 
