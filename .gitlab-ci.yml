@@ -15,6 +15,9 @@ python36:
   image: python:3.6-slim
   stage: test
   script: tox -e py36
+  post_script:
+    - bash <(curl -s https://codecov.io/bash)
+
 
 python37:
   image: python:3.7-slim
