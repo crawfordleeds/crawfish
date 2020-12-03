@@ -23,6 +23,7 @@ EXTRAS = {
         "black==20.8b1",
         "bumpversion==0.6.0",  # This will also install bump2version
         "tox==3.20.1",
+        "coverage==5.3",
         "twine==3.2.0",
     ]
 }
