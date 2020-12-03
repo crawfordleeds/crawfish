@@ -7,8 +7,9 @@
 ![PyPI - Django Version](https://img.shields.io/pypi/djversions/django-crawfish)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-crawfish)
 ![pipeline status](https://gitlab.com/crawfordleeds/crawfish/badges/master/pipeline.svg)
-![coverage report](https://gitlab.com/crawfordleeds/crawfish/badges/master/coverage.svg)
-![Codecov](https://img.shields.io/codecov/c/gl/crawfordleeds/crawfish?label=Codecov%20Coverage)
+
+[![coverage report](https://gitlab.com/crawfordleeds/crawfish/badges/master/coverage.svg)](https://gitlab.com/crawfordleeds/crawfish/-/commits/master)
+[![Codecov](https://img.shields.io/codecov/c/gl/crawfordleeds/crawfish?label=Codecov%20Coverage)](https://codecov.io/gl/crawfordleeds/crawfish/)
 
 This project contains a collection of code I re-use for most of my Django projects and is not [yet] well suited
 for public consumption.
