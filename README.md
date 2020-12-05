@@ -1,4 +1,4 @@
-![](https://res.cloudinary.com/dmuligbfy/image/upload/c_scale,r_20,w_150/Crawfish/crawfish.png)
+![](https://res.cloudinary.com/dmuligbfy/image/upload/c_scale,r_25,w_150/Crawfish/crawfish.png)
 
 # Django Crawfish
 ![PyPI - License](https://img.shields.io/pypi/l/django-crawfish)
