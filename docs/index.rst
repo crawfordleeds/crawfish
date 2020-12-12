@@ -18,6 +18,12 @@ Django Crawfish
    models
 
 .. toctree::
+   :caption: Middleware
+   :maxdepth: 2
+
+   middleware
+
+.. toctree::
    :caption: API Reference
    :maxdepth: 2
 
