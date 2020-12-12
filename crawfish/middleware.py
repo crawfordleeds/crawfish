@@ -14,12 +14,9 @@ class ErrorPagesMiddleware:
             if response.status_code == rest_status.HTTP_404_NOT_FOUND:
                 data = {"detail": "{0} not found".format(request.path)}
                 status = rest_status.HTTP_404_NOT_FOUND
-            elif response.status_code == rest_status.HTTP_404_NOT_FOUND:
+            elif response.status_code == rest_status.HTTP_403_NOT_FOUND:
                 data = {"detail": "Forbidden"}
                 status = rest_status.HTTP_403_FORBIDDEN
-            elif response.status_code == rest_status.HTTP_400_BAD_REQUEST:
-                data = {"detail": "Bad request"}
-                status = rest_status.HTTP_400_BAD_REQUEST
             elif response.status_code == rest_status.HTTP_500_INTERNAL_SERVER_ERROR:
                 data = {"detail": "Internal Server Error"}
                 status = rest_status.HTTP_500_INTERNAL_SERVER_ERROR
