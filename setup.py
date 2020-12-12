@@ -25,6 +25,7 @@ EXTRAS = {
         "tox==3.20.1",
         "coverage==5.3",
         "twine==3.2.0",
+        "djangorestframework==3.12.2",
     ]
 }
 
