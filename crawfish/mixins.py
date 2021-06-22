@@ -2,7 +2,7 @@ from rest_framework import exceptions as rest_exceptions
 
 from django.core.exceptions import ValidationError
 
-from project.common.utils import get_error_message
+from .utils import get_error_message
 
 
 class ApiErrorsMixin:
