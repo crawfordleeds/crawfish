@@ -16,7 +16,6 @@ class MiddlewareTests(APITestCase):
         resp = self.client.get(resource, content_type="application/json")
 
         self.assertEqual(resp.json().get("detail"), f"{resource} not found")
-        self.assertEqual(resp._headers.get("content-type")[1], "application/json")
 
     def test_404_request__content_type__else(self):
         content_types = (
@@ -31,4 +30,3 @@ class MiddlewareTests(APITestCase):
         for content_type in content_types:
             resp = self.client.get(resource, content_type=content_type)
             self.assertEqual(resp.status_code, status.HTTP_404_NOT_FOUND)
-            self.assertIsNot(resp._headers.get("content-type")[1], "application/json")
