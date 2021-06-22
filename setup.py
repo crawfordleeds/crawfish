@@ -12,7 +12,7 @@ AUTHOR = "Crawford Leeds"
 REQUIRES_PYTHON = ">=3.6"
 
 # Dont' manually change the version here. Use bumpversion instead
-VERSION = "0.0.11"
+VERSION = "0.0.12"
 
 # Required packages for this module
 REQUIRED = ["Django>=2.2"]
