@@ -26,6 +26,8 @@ EXTRAS = {
         "coverage==5.3",
         "twine==3.2.0",
         "djangorestframework==3.12.2",
+        "sphinx-rtd-theme==1.0.0",
+        "sphinx==4.2.0",
     ]
 }
 
