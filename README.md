@@ -57,3 +57,16 @@ Run tests:
 python runtests.py
 
 ```
+
+### Building Documentation
+
+Move to the docs directory:
+```sh
+cd docs/
+```
+
+Build the documentation (must have dev dependencies installed):
+```sh
+make html
+```
+
