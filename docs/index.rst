@@ -24,6 +24,12 @@ Django Crawfish
    middleware
 
 .. toctree::
+   :caption: Mixins
+   :maxdepth: 2
+
+   mixins
+
+.. toctree::
    :caption: API Reference
    :maxdepth: 2
 
