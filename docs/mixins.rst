@@ -24,6 +24,7 @@ ApiErrorsMixin adds the following attributes to the model:
     - ``error_messages``: a dictionary of error messages
 
 WIP: This ^^ was generated entirely with GitHub Copilot. Come back soon for proper documentation.
+
 DataclassMappingMixin
 ------
 
