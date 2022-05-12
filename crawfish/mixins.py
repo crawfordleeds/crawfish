@@ -19,13 +19,32 @@ class ApiErrorsMixin:
     }
 
     def handle_exception(self, exc):
-        if isinstance(exc, tuple(self.expected_exceptions.keys())):
-            drf_exception_class = self.expected_exceptions[exc.__class__]
+        return super().handle_exception(self.normalize_exception(exc))
+        # if isinstance(exc, tuple(self.expected_exceptions.keys())):
+        #     drf_exception_class = self.expected_exceptions[exc.__class__]
+        #     drf_exception = drf_exception_class(get_error_message(exc))
+        #
+        #     return super().handle_exception(drf_exception)
+        #
+        # return super().handle_exception(exc)
+
+    @classmethod
+    def normalize_exception(cls, exc):
+        if isinstance(exc, tuple(cls.expected_exceptions.keys())):
+            drf_exception_class = cls.expected_exceptions[exc.__class__]
             drf_exception = drf_exception_class(get_error_message(exc))
+            return drf_exception
+        return exc
 
-            return super().handle_exception(drf_exception)
 
-        return super().handle_exception(exc)
+def api_errors(func):
+    def wrapper(*args, **kwargs):
+        try:
+            func(*args, **kwargs)
+        except Exception as e:
+            raise ApiErrorsMixin.normalize_exception(e)
+
+    return wrapper
 
 
 class DataclassMappingMixin(Mapping):
